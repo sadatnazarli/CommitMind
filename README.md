@@ -1,34 +1,43 @@
 # CommitMind
 
-<p align="center">
-  <img src="./logoofcommitming.png" alt="CommitMind Logo" width="200"/>
-</p>
+<div align="center">
+  <img src="./logoofcommitming.png" alt="CommitMind Logo" width="400"/>
+  <h3>AI-Powered Git Commit Analysis Tool</h3>
+  <p>Understand your project's history through intelligent commit analysis</p>
+</div>
 
-<p align="center">
-  🧠 AI-Powered Git Commit Analysis Tool
-</p>
+---
 
-CommitMind is a powerful web application that uses AI to analyze Git repositories, providing insightful explanations for commit changes and helping developers better understand project history.
+## Overview
 
-## ✨ Features
+CommitMind is a powerful web application that leverages artificial intelligence to analyze Git repositories. It provides detailed explanations for commit changes, helping developers and teams better understand their project's evolution and development patterns.
 
-- 🔍 Analyze any public GitHub repository
-- 🔐 Support for private repositories with GitHub OAuth
-- 🌙 Dark/Light theme with persistence
-- 🔍 Advanced commit filtering by:
-  - Author
-  - Date range
-  - Search terms
-- 📤 Share analysis results via URL
-- 📱 Responsive design for all devices
-- 🎨 Modern glassmorphism UI
+## Features
 
-## 🚀 Local Setup
+- **Repository Analysis**
+  - Support for public GitHub repositories
+  - Private repository access with GitHub OAuth
+  - Intelligent commit explanation generation
+  - Detailed change analysis
+
+- **Advanced Filtering**
+  - Filter by author
+  - Filter by date range
+  - Full-text search in commits
+  - Real-time results updating
+
+- **User Experience**
+  - Dark/Light theme with persistence
+  - Modern glassmorphism design
+  - Responsive layout for all devices
+  - Share analysis via URL
+
+## Local Setup
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Node.js (for running the frontend server)
+- Node.js
 - Git
 
 ### Installation
@@ -45,79 +54,90 @@ cd backend
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the backend directory:
-```bash
-# Required for private repository access
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-```
+3. Configure environment variables:
+   - Create a `.env` file in the backend directory
+   - Add the following configuration:
+   ```
+   # Required for private repository access
+   GITHUB_CLIENT_ID=your_github_client_id
+   GITHUB_CLIENT_SECRET=your_github_client_secret
+   ```
 
 ### Running the Application
 
-1. Start the backend server (from the backend directory):
+1. Start the backend server:
 ```bash
+# From the backend directory
 python app.py
 ```
 The server will automatically find an available port between 5001-5005.
 
-2. Start the frontend server (from the frontend directory):
+2. Start the frontend server:
 ```bash
+# From the frontend directory
 cd ../frontend
 python -m http.server 8000
 ```
 
-3. Open your browser and visit:
+3. Access the application:
 ```
 http://localhost:8000
 ```
 
-## 🔒 GitHub OAuth Setup (Optional)
+## GitHub OAuth Configuration
 
-Only required if you want to analyze private repositories:
+For private repository access:
 
 1. Go to GitHub Settings > Developer Settings > OAuth Apps
-2. Click "New OAuth App"
-3. Fill in the following:
-   - Application name: CommitMind Local
-   - Homepage URL: http://localhost:8000
-   - Authorization callback URL: http://localhost:8000/callback
-4. Copy the Client ID and Client Secret to your `.env` file
+2. Create a new OAuth App with:
+   - Application name: `CommitMind Local`
+   - Homepage URL: `http://localhost:8000`
+   - Authorization callback URL: `http://localhost:8000/callback`
+3. Copy the Client ID and Client Secret to your `.env` file
 
-## 🛠️ Usage
+## Usage Guide
 
-1. Enter a GitHub repository URL in the format:
+1. Repository URL Format:
    ```
    https://github.com/username/repository
    ```
 
-2. If analyzing private repositories, click "Connect GitHub" to authenticate
+2. Authentication:
+   - Click "Connect GitHub" for private repositories
+   - Wait for authentication confirmation
 
-3. Wait for the analysis to complete
+3. Analysis:
+   - Enter repository URL
+   - Click "Analyze Repository"
+   - Wait for the analysis to complete
 
-4. Use the filters to explore commits:
-   - Filter by author name
-   - Select date range (Today, This Week, This Month)
-   - Search commit messages and explanations
+4. Exploring Results:
+   - Use author filter for specific contributors
+   - Select date range for time-based analysis
+   - Search through commit messages and explanations
+   - Share results using the share button
 
-5. Share your analysis by clicking the "Share" button
+## Technical Details
 
-## ⚠️ Limitations
+- Maximum analysis limit: 20 most recent commits
+- Rate limiting:
+  - 100 requests per day
+  - 10 requests per hour
+  - 5 analysis requests per minute
 
-- Maximum of 20 most recent commits are analyzed per request
-- Repository URL must be in the correct GitHub format
-- Private repositories require GitHub authentication
-- The application is designed for local use only
+## Security Notes
 
-## 🤝 Contributing
+- GitHub tokens are stored securely in local storage
+- Environment variables are used for sensitive data
+- CORS protection is enabled
+- Rate limiting prevents abuse
 
-This is a local development tool. Feel free to fork and modify for your needs.
+## License
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-<p align="center">
-Made with ❤️ for developers who want to understand code better
-</p>
+<div align="center">
+  <p>Built for developers who value understanding their code's history</p>
+</div>
