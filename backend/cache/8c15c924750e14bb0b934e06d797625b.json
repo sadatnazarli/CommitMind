@@ -1,0 +1,1 @@
+{"timestamp": "2025-05-15T20:57:02.377500", "explanation": "This commit adds a new file named \"app.py\" to the project. The file contains Python code for an email cleaner application using libraries like imaplib and tkinter. The code sets up a GUI interface for the email cleaner app with input fields and labels."}
