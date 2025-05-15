@@ -1,7 +1,7 @@
 # CommitMind
 
 <p align="center">
-  <img src="logo.png" alt="CommitMind Logo" width="200"/>
+  <img src="./logoofcommitming.png" alt="CommitMind Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ CommitMind is a powerful web application that uses AI to analyze Git repositorie
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/CommitMind.git
+git clone https://github.com/sadatnazarli/CommitMind.git
 cd CommitMind
 ```
 
